@@ -60,14 +60,14 @@ storiesOf("Paragraph", module)
     <Paragraph color="richblue">I'm a colored `Paragraph`</Paragraph>
   ));
 
-storiesOf("Button", module)
-  .add("with text", () => (
-    <Button onClick={action("clicked")}>Hello Button</Button>
-  ))
-  .add("with some emoji", () => (
-    <Button onClick={action("clicked")}>
-      <span role="img" aria-label="so cool">
-        😀 😎 👍 💯
-      </span>
-    </Button>
-  ));
+// storiesOf("Button", module)
+//   .add("with text", () => (
+//     <Button onClick={action("clicked")}>Hello Button</Button>
+//   ))
+//   .add("with some emoji", () => (
+//     <Button onClick={action("clicked")}>
+//       <span role="img" aria-label="so cool">
+//         😀 😎 👍 💯
+//       </span>
+//     </Button>
+//   ));
