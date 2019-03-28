@@ -19,6 +19,7 @@ export default {
   },
   space: [0, 4, 8, 16, 32, 64, 128, 256],
   fonts: {
+    sans: `system-ui, sans-serif`,
     raleway: `Raleway, sans-serif`,
     worksans: `'Work Sans', sans-serif`
   },
