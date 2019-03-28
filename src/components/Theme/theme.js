@@ -8,8 +8,14 @@ export default {
     extrabold: 800
   },
   colors: {
-    blue: "#07c",
-    lightgray: "#f6f6ff"
+    gossamer: "#31A28A",
+    richblue: "#535AB4",
+    tapestry: "#A8627D",
+    primarydark: "#0E0F15",
+    primary: "#14151D",
+    text: "#C8D3F0",
+    textdark: "#B6BBCF",
+    textinactive: "rgba(175, 188, 219, 0.70)"
   },
   space: [0, 4, 8, 16, 32, 64, 128, 256],
   fonts: {
@@ -17,7 +23,7 @@ export default {
     worksans: `'Work Sans', sans-serif`
   },
   shadows: {
-    small: "0 0 4px rgba(0, 0, 0, .125)",
-    large: "0 0 24px rgba(0, 0, 0, .125)"
+    small: "0 0 4px #000000",
+    large: "0 0 24px #000000"
   }
 };
