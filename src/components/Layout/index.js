@@ -9,6 +9,9 @@ import React from "react";
 import PropTypes from "prop-types";
 import { Box, Text, Link } from "rebass";
 
+import "typeface-raleway";
+import "typeface-work-sans";
+
 import Theme from "../Theme";
 
 import { useSiteMetadata } from "../../hooks";
