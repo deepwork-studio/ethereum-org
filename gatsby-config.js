@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Deep Work Starter`,
-    description: `Kick off your next project with Deep Work Studio & Gatsby`,
+    title: `Ethereum`,
+    description: `The worlds largest community solving global challenges and democratizing the internet.`,
     author: `@deepwork_studio`
   },
   plugins: [
@@ -19,13 +19,13 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `gatsby-deepwork-starter`,
-        short_name: `deepwork`,
+        name: `ethereum`,
+        short_name: `ethereum`,
         start_url: `/`,
-        background_color: `#000`,
+        background_color: `#0E0F15`,
         theme_color: `#fff`,
         display: `minimal-ui`,
-        icon: `src/images/deepwork-logo.png` // This path is relative to the root of the site.
+        icon: `src/images/favicon.png` // This path is relative to the root of the site.
       }
     }
   ]
