@@ -6,7 +6,8 @@ const Header = props => (
 );
 
 Header.defaultProps = {
-  fontSize: 4
+  fontSize: 4,
+  color: "text"
 };
 
 export default Header;
