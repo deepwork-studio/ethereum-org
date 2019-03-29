@@ -1,5 +1,6 @@
 import React from "react";
-import { Flex, Image } from "rebass";
+import { Flex, Image, Link } from "rebass";
+// import { Link } from "gatsby";
 
 import Layout from "../components/Layout";
 import SEO from "../components/SEO";
@@ -13,6 +14,20 @@ import developers from "../images/developers.svg";
 import learn from "../images/learn.svg";
 import news from "../images/news.svg";
 import logo from "../images/ethereum-logo.svg";
+// import logo from "../images/ethereum-logo-better.svg";
+
+const IndexPageCard = props => (
+  <Card
+    {...props}
+    flex={1}
+    bg="primary"
+    pt={40 + 6}
+    pb={4}
+    px={4}
+    shadow
+    css={{ height: "100%" }}
+  />
+);
 
 const IndexPage = () => (
   <Layout>
@@ -24,58 +39,43 @@ const IndexPage = () => (
 
         <Row>
           <Col>
-            <Card
-              flex={1}
-              bg="primary"
-              gradient="richblue"
-              pt={40 + 6}
-              pb={4}
-              px={4}
-            >
-              <Image src={developers} mb={80} />
-              <Header lineHeight={1.5} as="h2" color="richblue">
-                Build Unstoppable Organizations
-              </Header>
-              <Paragraph fontSize={3} mb={0} mt={2}>
-                Developer Tools
-              </Paragraph>
-            </Card>
+            <Link flex={1} href="https://ethereum.org">
+              <IndexPageCard gradient="richblue">
+                <Image src={developers} mb={80} />
+                <Header lineHeight={1.5} as="h2" color="richblue">
+                  Build Unstoppable Organizations
+                </Header>
+                <Paragraph fontSize={3} mb={0} mt={2}>
+                  Developer Tools
+                </Paragraph>
+              </IndexPageCard>
+            </Link>
           </Col>
           <Col>
-            <Card
-              flex={1}
-              bg="primary"
-              gradient="gossamer"
-              pt={40 + 6}
-              pb={4}
-              px={4}
-            >
-              <Image src={learn} mb={80} />
-              <Header lineHeight={1.5} as="h2" color="gossamer">
-                Why Ethereum?
-              </Header>
-              <Paragraph fontSize={3} mb={0} mt={2}>
-                Learn
-              </Paragraph>
-            </Card>
+            <Link flex={1} href="https://ethereum.org">
+              <IndexPageCard gradient="gossamer">
+                <Image src={learn} mb={80} />
+                <Header lineHeight={1.5} as="h2" color="gossamer">
+                  Why Ethereum?
+                </Header>
+                <Paragraph fontSize={3} mb={0} mt={2}>
+                  Learn
+                </Paragraph>
+              </IndexPageCard>
+            </Link>
           </Col>
           <Col>
-            <Card
-              flex={1}
-              bg="primary"
-              gradient="tapestry"
-              pt={40 + 6}
-              pb={4}
-              px={4}
-            >
-              <Image src={news} mb={80} />
-              <Header lineHeight={1.5} as="h2" color="tapestry">
-                News and Community
-              </Header>
-              <Paragraph fontSize={3} mb={0} mt={2}>
-                Newsroom
-              </Paragraph>
-            </Card>
+            <Link flex={1} href="https://ethereum.org">
+              <IndexPageCard gradient="tapestry">
+                <Image src={news} mb={80} />
+                <Header lineHeight={1.5} as="h2" color="tapestry">
+                  News and Community
+                </Header>
+                <Paragraph fontSize={3} mb={0} mt={2}>
+                  Newsroom
+                </Paragraph>
+              </IndexPageCard>
+            </Link>
           </Col>
         </Row>
 

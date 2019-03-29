@@ -26,5 +26,8 @@ export default {
   shadows: {
     small: "0 0 4px #000000",
     large: "0 0 24px #000000"
+  },
+  Link: {
+    textDecoration: "none"
   }
 };
