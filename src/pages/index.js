@@ -33,12 +33,12 @@ const IndexPage = () => (
   <Layout>
     <SEO />
 
-    <Flex css={{ height: "100vh" }} alignItems="center">
-      <Container>
-        <Image src={logo} mb={5} height={60} />
+    <Flex css={{ minHeight: "100vh" }} alignItems="center">
+      <Container px={4}>
+        <Image src={logo} mb={5} mt={[4, 0]} height={60} />
 
         <Row>
-          <Col>
+          <Col mb={[4,0]}>
             <Link flex={1} href="https://ethereum.org">
               <IndexPageCard gradient="richblue">
                 <Image src={developers} mb={80} />
@@ -51,7 +51,8 @@ const IndexPage = () => (
               </IndexPageCard>
             </Link>
           </Col>
-          <Col>
+
+          <Col mb={[4,0]}>
             <Link flex={1} href="https://ethereum.org">
               <IndexPageCard gradient="gossamer">
                 <Image src={learn} mb={80} />
@@ -64,7 +65,8 @@ const IndexPage = () => (
               </IndexPageCard>
             </Link>
           </Col>
-          <Col>
+
+          <Col mb={[4,0]}>
             <Link flex={1} href="https://ethereum.org">
               <IndexPageCard gradient="tapestry">
                 <Image src={news} mb={80} />
@@ -79,7 +81,7 @@ const IndexPage = () => (
           </Col>
         </Row>
 
-        <Paragraph fontSize={3} mt={5}>
+        <Paragraph fontSize={3} mt={[4, 5]} lineHeight={1.5}>
           The worlds largest community solving global challenges and
           democratizing the internet.
         </Paragraph>

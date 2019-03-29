@@ -12,7 +12,7 @@ const Col = props => <Flex {...props} />;
 
 Col.defaultProps = {
   px: 3,
-  width: 1 / 2
+  width: [null, 1 / 2]
 };
 
 export { Row, Col };
