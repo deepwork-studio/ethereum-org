@@ -34,7 +34,7 @@ const IndexPage = () => (
     <SEO />
 
     <Flex css={{ minHeight: "100vh" }} alignItems="center">
-      <Container px={4}>
+      <Container px={[4, 0]}>
         <Image src={logo} mb={5} mt={[4, 0]} height={60} />
 
         <Row>
