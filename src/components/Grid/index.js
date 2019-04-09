@@ -12,6 +12,7 @@ const Col = props => <Flex {...props} />;
 
 Col.defaultProps = {
   px: 3,
+  flexDirection: "column",
   width: [null, 1 / 2]
 };
 

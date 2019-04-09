@@ -1,6 +1,6 @@
 import React from "react";
 import { Box, Card as RebassCard } from "rebass";
-import { css } from "styled-components";
+import styled, { css } from "styled-components";
 import PropTypes from "prop-types";
 
 const GradientBar = ({ gradient, gradientHeight, ...rest }) => {
@@ -40,37 +40,31 @@ GradientBar.defaultProps = {
   gradientHeight: "thick"
 };
 
-const Card = ({ shadow, ...rest }) => {
-  return (
-    <RebassCard
-      {...rest}
-      css={css`
-        position: relative;
+const Card = styled(RebassCard)`
+  position: relative;
 
-        /* BEEG Shadow Style */
-        ${shadow &&
-          css`
-            &:hover::after {
-              opacity: 1;
-            }
+  /* BEEG Shadow Style */
+  ${props =>
+    props.shadow &&
+    css`
+      &:hover::after {
+        opacity: 1;
+      }
 
-            &::after {
-              transition: opacity 250ms ease-in-out;
-              position: absolute;
-              opacity: 0;
-              content: "";
-              left: 5%;
-              right: 5%;
-              top: 5%;
-              bottom: 5%;
-              z-index: -1;
-              box-shadow: 0 10px 40px 10px #000000;
-            }
-          `}
-      `}
-    />
-  );
-};
+      &::after {
+        transition: opacity 250ms ease-in-out;
+        position: absolute;
+        opacity: 0;
+        content: "";
+        left: 5%;
+        right: 5%;
+        top: 5%;
+        bottom: 5%;
+        z-index: -1;
+        box-shadow: 0 10px 40px 10px #000000;
+      }
+    `}
+`;
 
 Card.propTypes = {
   shadow: PropTypes.bool

@@ -1,7 +1,7 @@
 import React from "react";
 import { Text } from "rebass";
 
-const Caps = props => <Text {...props} css={{ textTransform: "uppercase" }} />
+const Caps = props => <Text {...props} css={{ textTransform: "uppercase" }} />;
 
 Caps.defaultProps = {
   as: "p",
@@ -10,8 +10,7 @@ Caps.defaultProps = {
   fontWeight: "bold",
   fontFamily: "worksans",
   letterSpacing: "0.24em",
-  lineHeight: "solid",
-  my: 0
+  lineHeight: "solid"
 };
 
 export default Caps;

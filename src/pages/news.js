@@ -10,18 +10,21 @@ import Header from "../components/Header";
 import Container from "../components/Container";
 import { Row, Col } from "../components/Grid";
 import { Developers, Logo, Learn, News } from "../components/Images";
+import Stunt from "../components/Stunt";
 
 const IndexPage = () => (
-  <Layout css={{ position: "relative" }}>
+  <Layout>
     <SEO title="News" />
 
     <GradientBar gradient="tapestry" />
 
     <Container px={[4, 0]}>
-      <News mb={4} />
+      <News mb={4} mt={[6, 7]} />
       <Caps>Newsroom</Caps>
       <Header>Community and News</Header>
     </Container>
+
+    <Stunt />
   </Layout>
 );
 

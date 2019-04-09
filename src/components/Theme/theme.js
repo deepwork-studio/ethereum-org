@@ -8,7 +8,7 @@ export default {
     xlarge: 24,
     xxlarge: 40
   },
-  lineHeights: { solid: 1, copy: 1.5, title: 1.2 },
+  lineHeights: { solid: 1, copy: 1.5, title: 1.2, double: 2 },
   fontWeights: {
     regular: 400,
     medium: 500,
@@ -25,7 +25,7 @@ export default {
     textdark: "#B6BBCF",
     textinactive: "rgba(175, 188, 219, 0.70)"
   },
-  space: [0, 4, 8, 16, 32, 64, 128, 256],
+  space: [0, 4, 8, 16, 32, 64, 128, 256, 336],
   fonts: {
     sans: `system-ui, sans-serif`,
     raleway: `Raleway, sans-serif`,
