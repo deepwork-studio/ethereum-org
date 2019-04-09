@@ -1,6 +1,14 @@
 export default {
   breakpoints: ["40em", "52em", "64em"],
-  fontSizes: [12, 14, 16, 20, 24, 32, 48, 64],
+  fontSizes: {
+    tiny: 12,
+    small: 14,
+    medium: 16,
+    large: 18,
+    xlarge: 24,
+    xxlarge: 40
+  },
+  lineHeights: { solid: 1, copy: 1.5, title: 1.2 },
   fontWeights: {
     regular: 400,
     medium: 500,
@@ -26,8 +34,5 @@ export default {
   shadows: {
     small: "0 0 4px #000000",
     large: "0 0 24px #000000"
-  },
-  Link: {
-    textDecoration: "none"
   }
 };

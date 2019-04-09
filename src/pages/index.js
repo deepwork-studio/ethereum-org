@@ -38,10 +38,10 @@ const IndexPage = () => (
               <IndexPageCard>
                 <GradientBar gradient="richblue" />
                 <Developers mb={80} />
-                <Header lineHeight={1.5} as="h2" color="richblue">
+                <Header as="h2" color="richblue">
                   Build Unstoppable Organizations
                 </Header>
-                <Paragraph fontSize={3} mb={0} mt={2}>
+                <Paragraph mb={0} mt={2}>
                   Developer Tools
                 </Paragraph>
               </IndexPageCard>
@@ -53,10 +53,10 @@ const IndexPage = () => (
               <IndexPageCard>
                 <GradientBar gradient="gossamer" />
                 <Learn mb={80} />
-                <Header lineHeight={1.5} as="h2" color="gossamer">
+                <Header as="h2" color="gossamer">
                   Why Ethereum?
                 </Header>
-                <Paragraph fontSize={3} mb={0} mt={2}>
+                <Paragraph mb={0} mt={2}>
                   Learn
                 </Paragraph>
               </IndexPageCard>
@@ -68,10 +68,10 @@ const IndexPage = () => (
               <IndexPageCard>
                 <GradientBar gradient="tapestry" />
                 <News mb={80} />
-                <Header lineHeight={1.5} as="h2" color="tapestry">
+                <Header as="h2" color="tapestry">
                   News and Community
                 </Header>
-                <Paragraph fontSize={3} mb={0} mt={2}>
+                <Paragraph mb={0} mt={2}>
                   Newsroom
                 </Paragraph>
               </IndexPageCard>
@@ -79,7 +79,7 @@ const IndexPage = () => (
           </Col>
         </Row>
 
-        <Paragraph fontSize={3} mt={[4, 5]} lineHeight={1.5}>
+        <Paragraph mt={[4, 5]}>
           The worlds largest community solving global challenges and
           democratizing the internet.
         </Paragraph>

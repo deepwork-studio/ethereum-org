@@ -1,11 +1,11 @@
 import React from "react";
-import { Flex } from "rebass";
-import { Link } from "gatsby";
+import { Flex, Text } from "rebass";
 
 import Layout from "../components/Layout";
 import SEO from "../components/SEO";
 import Card, { GradientBar } from "../components/Card";
 import Paragraph from "../components/Paragraph";
+import Caps from "../components/Caps";
 import Header from "../components/Header";
 import Container from "../components/Container";
 import { Row, Col } from "../components/Grid";
@@ -15,13 +15,13 @@ const IndexPage = () => (
   <Layout>
     <SEO />
 
-    {/* <GradientBar></ */}
+    <GradientBar gradient="richblue" />
 
-    <Flex css={{ minHeight: "100vh" }} alignItems="center">
-      <Container px={[4, 0]}>
-        <Developers mb={80} />
-      </Container>
-    </Flex>
+    <Container px={[4, 0]}>
+      <Developers mb={4} />
+      <Caps>Problems to solve</Caps>
+      <Header>What could you build?</Header>
+    </Container>
   </Layout>
 );
 

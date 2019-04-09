@@ -1,12 +1,13 @@
 import React from "react";
 import { Heading } from "rebass";
 
-const Header = props => (
-  <Heading {...props} fontFamily="raleway" fontWeight="extrabold" />
-);
+const Header = props => <Heading {...props} />;
 
 Header.defaultProps = {
-  fontSize: 4,
+  fontSize: "xlarge",
+  fontWeight: "extrabold",
+  fontFamily: "raleway",
+  lineHeight: "copy",
   color: "text"
 };
 
