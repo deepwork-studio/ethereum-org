@@ -1,9 +1,9 @@
 import React from "react";
-import { Card as RebassCard } from "rebass";
+import { Box, Card as RebassCard } from "rebass";
 import { css } from "styled-components";
 import PropTypes from "prop-types";
 
-const Card = ({ gradient, gradientHeight, shadow, ...rest }) => {
+const GradientBar = ({ gradient, gradientHeight, ...rest }) => {
   const gradientTypes = {
     gossamer: "linear-gradient(to right, #1D566D, #44EBA5);",
     richblue: "linear-gradient(to right, #6672E5, #43458A);",
@@ -16,24 +16,36 @@ const Card = ({ gradient, gradientHeight, shadow, ...rest }) => {
   };
 
   return (
+    <Box
+      css={css`
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 0;
+        height: ${gradientHeights[gradientHeight]};
+        background-image: ${gradientTypes[gradient]};
+        pointer-events: none;
+      `}
+      {...rest}
+    />
+  );
+};
+
+GradientBar.propTypes = {
+  gradient: PropTypes.oneOf(["gossamer", "richblue", "tapestry"]),
+  gradientHeight: PropTypes.oneOf(["thin", "thick"])
+};
+
+GradientBar.defaultProps = {
+  gradientHeight: "thick"
+};
+
+const Card = ({ shadow, ...rest }) => {
+  return (
     <RebassCard
       {...rest}
       css={css`
         position: relative;
-
-        /* Gradient Top Border Style */
-        ${gradient &&
-          css`
-            &::before {
-              position: absolute;
-              content: "";
-              left: 0;
-              right: 0;
-              top: 0;
-              height: ${gradientHeights[gradientHeight]};
-              background-image: ${gradientTypes[gradient]};
-            }
-          `}
 
         /* BEEG Shadow Style */
         ${shadow &&
@@ -61,13 +73,9 @@ const Card = ({ gradient, gradientHeight, shadow, ...rest }) => {
 };
 
 Card.propTypes = {
-  gradient: PropTypes.oneOf(["gossamer", "richblue", "tapestry"]),
-  gradientHeight: PropTypes.oneOf(["thin", "thick"]),
   shadow: PropTypes.bool
 };
 
-Card.defaultProps = {
-  gradientHeight: "thick"
-};
+export { GradientBar };
 
 export default Card;

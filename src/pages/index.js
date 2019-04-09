@@ -1,20 +1,15 @@
 import React from "react";
-import { Flex, Image, Link } from "rebass";
-// import { Link } from "gatsby";
+import { Flex } from "rebass";
 
 import Layout from "../components/Layout";
 import SEO from "../components/SEO";
-import Card from "../components/Card";
+import Card, { GradientBar } from "../components/Card";
 import Paragraph from "../components/Paragraph";
 import Header from "../components/Header";
 import Container from "../components/Container";
 import { Row, Col } from "../components/Grid";
-
-import developers from "../images/developers.svg";
-import learn from "../images/learn.svg";
-import news from "../images/news.svg";
-import logo from "../images/ethereum-logo.svg";
-// import logo from "../images/ethereum-logo-better.svg";
+import { Developers, Logo, Learn, News } from "../components/Images";
+import { InternalLink as Link } from "../components/Links";
 
 const IndexPageCard = props => (
   <Card
@@ -35,13 +30,14 @@ const IndexPage = () => (
 
     <Flex css={{ minHeight: "100vh" }} alignItems="center">
       <Container px={[4, 0]}>
-        <Image src={logo} mb={5} mt={[4, 0]} height={60} />
+        <Logo mb={5} mt={[4, 0]} />
 
         <Row>
-          <Col mb={[4,0]}>
-            <Link flex={1} href="https://ethereum.org">
-              <IndexPageCard gradient="richblue">
-                <Image src={developers} mb={80} />
+          <Col mb={[4, 0]}>
+            <Link flex={1} to="/developers/">
+              <IndexPageCard>
+                <GradientBar gradient="richblue" />
+                <Developers mb={80} />
                 <Header lineHeight={1.5} as="h2" color="richblue">
                   Build Unstoppable Organizations
                 </Header>
@@ -52,10 +48,11 @@ const IndexPage = () => (
             </Link>
           </Col>
 
-          <Col mb={[4,0]}>
-            <Link flex={1} href="https://ethereum.org">
-              <IndexPageCard gradient="gossamer">
-                <Image src={learn} mb={80} />
+          <Col mb={[4, 0]}>
+            <Link flex={1} to="/learn/">
+              <IndexPageCard>
+                <GradientBar gradient="gossamer" />
+                <Learn mb={80} />
                 <Header lineHeight={1.5} as="h2" color="gossamer">
                   Why Ethereum?
                 </Header>
@@ -66,10 +63,11 @@ const IndexPage = () => (
             </Link>
           </Col>
 
-          <Col mb={[4,0]}>
-            <Link flex={1} href="https://ethereum.org">
-              <IndexPageCard gradient="tapestry">
-                <Image src={news} mb={80} />
+          <Col mb={[4, 0]}>
+            <Link flex={1} to="/news/">
+              <IndexPageCard>
+                <GradientBar gradient="tapestry" />
+                <News mb={80} />
                 <Header lineHeight={1.5} as="h2" color="tapestry">
                   News and Community
                 </Header>
