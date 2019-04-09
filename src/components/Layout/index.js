@@ -8,10 +8,14 @@ import "typeface-raleway";
 import "typeface-work-sans";
 
 import Theme from "../Theme";
+import Stunt from "../Stunt";
 
-const Layout = ({ children }) => (
+const Layout = ({ children, ...rest }) => (
   <Theme>
-    <Box as="main">{children}</Box>
+    <Box as="main" {...rest}>
+      {children}
+    </Box>
+    <Stunt />
   </Theme>
 );
 

@@ -12,8 +12,8 @@ import { Row, Col } from "../components/Grid";
 import { Developers, Logo, Learn, News } from "../components/Images";
 
 const IndexPage = () => (
-  <Layout>
-    <SEO />
+  <Layout css={{ position: "relative" }}>
+    <SEO title="Developers" />
 
     <GradientBar gradient="richblue" />
 

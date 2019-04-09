@@ -41,9 +41,9 @@ const IndexPage = () => (
                 <Header as="h2" color="richblue">
                   Build Unstoppable Organizations
                 </Header>
-                <Paragraph mb={0} mt={2}>
+                <Header as="p" fontWeight="medium" mt={2}>
                   Developer Tools
-                </Paragraph>
+                </Header>
               </IndexPageCard>
             </Link>
           </Col>
@@ -56,9 +56,9 @@ const IndexPage = () => (
                 <Header as="h2" color="gossamer">
                   Why Ethereum?
                 </Header>
-                <Paragraph mb={0} mt={2}>
+                <Header as="p" fontWeight="medium" mt={2}>
                   Learn
-                </Paragraph>
+                </Header>
               </IndexPageCard>
             </Link>
           </Col>
@@ -71,9 +71,9 @@ const IndexPage = () => (
                 <Header as="h2" color="tapestry">
                   News and Community
                 </Header>
-                <Paragraph mb={0} mt={2}>
+                <Header as="p" fontWeight="medium" mt={2}>
                   Newsroom
-                </Paragraph>
+                </Header>
               </IndexPageCard>
             </Link>
           </Col>

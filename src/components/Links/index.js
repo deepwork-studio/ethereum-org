@@ -1,3 +1,4 @@
+import React from "react";
 import styled, { css } from "styled-components";
 import { Link as RebassLink } from "rebass";
 import { Link as GatsbyLink } from "gatsby";
@@ -15,11 +16,7 @@ const linkStyles = {
   textDecoration: "none"
 };
 
-const ExternalLink = styled(RebassLink)(linkStyles);
-
-ExternalLink.defaultProps = {
-  color: "inherit"
-};
+const ExternalLink = props => <RebassLink {...props} css={linkStyles} />;
 
 const InternalLink = styled(GatsbyLink)(
   linkStyles,
@@ -31,9 +28,5 @@ const InternalLink = styled(GatsbyLink)(
   order,
   alignSelf
 );
-
-InternalLink.defaultProps = {
-  color: "inherit"
-};
 
 export { InternalLink, ExternalLink };
