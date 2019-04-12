@@ -52,7 +52,7 @@ const Card = styled(RebassCard)`
       }
 
       &::after {
-        transition: opacity 250ms ease-in-out;
+        transition: opacity 250ms;
         position: absolute;
         opacity: 0;
         content: "";

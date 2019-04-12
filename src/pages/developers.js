@@ -1,6 +1,6 @@
 import React from "react";
 import styled, { css } from "styled-components";
-import { Box, Flex, Text, Image } from "rebass";
+import { Box, Image } from "rebass";
 
 import Layout from "../components/Layout";
 import SEO from "../components/SEO";
@@ -10,9 +10,9 @@ import Caps from "../components/Caps";
 import Header from "../components/Header";
 import Container from "../components/Container";
 import { Row, Col } from "../components/Grid";
-import { Developers, Logo, Learn, News } from "../components/Images";
+import { Developers } from "../components/Images";
 import Stunt from "../components/Stunt";
-import { ExternalLink as Link } from "../components/Links";
+import { ExternalLink } from "../components/Links";
 import theme from "../components/Theme/theme";
 
 import smartContractBadge from "../images/smart-contract.svg";
@@ -116,24 +116,24 @@ const IndexPage = () => (
       <Container px={[4, 0]}>
         <Row>
           <Col mb={[4, 0]}>
-            <Link flex={1} href="https://...">
+            <ExternalLink flex={1} href="https://ethereum.org/">
               <CallToActionCard image={smartContractBadge}>
                 <HoverHeader>Start Building</HoverHeader>
                 <Header as="p" fontWeight="medium">
                   Smart Contract Docs
                 </Header>
               </CallToActionCard>
-            </Link>
+            </ExternalLink>
           </Col>
           <Col mb={[4, 0]}>
-            <Link flex={1} href="https://...">
+            <ExternalLink flex={1} href="https://ethereum.org/">
               <CallToActionCard image={solidityBadge}>
                 <HoverHeader>Learn Solidity</HoverHeader>
                 <Header as="p" fontWeight="medium">
                   Solidity Docs
                 </Header>
               </CallToActionCard>
-            </Link>
+            </ExternalLink>
           </Col>
         </Row>
       </Container>

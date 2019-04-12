@@ -1,5 +1,5 @@
 import React from "react";
-import styled, { css } from "styled-components";
+import styled from "styled-components";
 import { Link as RebassLink } from "rebass";
 import { Link as GatsbyLink } from "gatsby";
 import {
@@ -13,10 +13,18 @@ import {
 } from "styled-system";
 
 const linkStyles = {
-  textDecoration: "none"
+  textDecoration: "none",
+  color: "initial"
 };
 
-const ExternalLink = props => <RebassLink {...props} css={linkStyles} />;
+const ExternalLink = props => (
+  <RebassLink
+    {...props}
+    target="_blank"
+    rel="noopener noreferrer"
+    css={linkStyles}
+  />
+);
 
 const InternalLink = styled(GatsbyLink)(
   linkStyles,

@@ -9,7 +9,7 @@ import Header from "../components/Header";
 import Container from "../components/Container";
 import { Row, Col } from "../components/Grid";
 import { Developers, Logo, Learn, News } from "../components/Images";
-import { InternalLink as Link } from "../components/Links";
+import { InternalLink } from "../components/Links";
 
 const IndexPageCard = props => (
   <Card
@@ -33,8 +33,8 @@ const IndexPage = () => (
         <Logo mb={5} mt={[4, 0]} />
 
         <Row>
-          <Col mb={[4, 0]}>
-            <Link flex={1} to="/developers/">
+          <Col width={[null, 1 / 3]} mb={[4, 0]}>
+            <InternalLink flex={1} to="/developers/">
               <IndexPageCard>
                 <GradientBar gradient="richblue" />
                 <Developers mb={80} />
@@ -45,11 +45,11 @@ const IndexPage = () => (
                   Developer Tools
                 </Header>
               </IndexPageCard>
-            </Link>
+            </InternalLink>
           </Col>
 
-          <Col mb={[4, 0]}>
-            <Link flex={1} to="/learn/">
+          <Col width={[null, 1 / 3]} mb={[4, 0]}>
+            <InternalLink flex={1} to="/learn/">
               <IndexPageCard>
                 <GradientBar gradient="gossamer" />
                 <Learn mb={80} />
@@ -60,11 +60,11 @@ const IndexPage = () => (
                   Learn
                 </Header>
               </IndexPageCard>
-            </Link>
+            </InternalLink>
           </Col>
 
-          <Col mb={[4, 0]}>
-            <Link flex={1} to="/news/">
+          <Col width={[null, 1 / 3]} mb={[4, 0]}>
+            <InternalLink flex={1} to="/news/">
               <IndexPageCard>
                 <GradientBar gradient="tapestry" />
                 <News mb={80} />
@@ -75,7 +75,7 @@ const IndexPage = () => (
                   Newsroom
                 </Header>
               </IndexPageCard>
-            </Link>
+            </InternalLink>
           </Col>
         </Row>
 
