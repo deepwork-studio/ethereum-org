@@ -226,7 +226,7 @@ const IndexPage = () => (
       <Container>
         <Row flexDirection={["column", null, "row"]}>
           <Col mb={[4, null, 0]} width={[1, null, 1 / 2]}>
-            <ExternalLink flex={1} href="https://solidity.readthedocs.io/en/v0.5.7/">
+            <ExternalLink flex={1} href="http://www.ethdocs.org/en/latest/">
               <CallToActionCard image={smartContractBadge}>
                 <HoverHeader>Start Building</HoverHeader>
                 <Header as="p" fontWeight="medium">
