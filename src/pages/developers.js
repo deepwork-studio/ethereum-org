@@ -14,6 +14,7 @@ import { Developers } from "../components/Images";
 import Stunt from "../components/Stunt";
 import { ExternalLink } from "../components/Links";
 import theme from "../components/Theme/theme";
+import Nav from "../components/Nav";
 
 import smartContractBadge from "../images/smart-contract.svg";
 import solidityBadge from "../images/solidity.svg";
@@ -88,7 +89,7 @@ const DeveloperImage = ({ active, ...rest }) => (
       transition: "opacity 250ms 125ms ease-in-out",
       position: "absolute",
       transform: "scale(1.25)",
-      zIndex: 99999
+      zIndex: 2000
     }}
     {...rest}
   />
@@ -196,6 +197,8 @@ const IndexPage = () => (
     <SEO title="Developers" />
 
     <GradientBar gradient="richblue" sticky />
+
+    <Nav page="developers" />
 
     <Box as="section" my={[6, 7]}>
       <Container>

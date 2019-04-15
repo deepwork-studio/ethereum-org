@@ -1,12 +1,13 @@
 import React from "react";
 import { Box, Flex } from "rebass";
+import PropTypes from "prop-types";
 
 import Caps from "../Caps";
 import { GradientBar } from "../Card";
 import { InternalLink } from "../Links";
 import Container from "../Container";
 
-const Nav = () => (
+const Nav = ({ page }) => (
   <Box
     css={{
       position: "fixed",
@@ -24,7 +25,7 @@ const Nav = () => (
           justifyContent="center"
           css={{ position: "relative" }}
         >
-          <GradientBar gradient="richblue" />
+          {page === "developers" && <GradientBar gradient="richblue" />}
           <InternalLink to="/developers/">
             <Caps m={0} py={4}>
               Developers
@@ -37,7 +38,7 @@ const Nav = () => (
           justifyContent="center"
           css={{ position: "relative" }}
         >
-          <GradientBar gradient="tapestry" />
+          {page === "learn" && <GradientBar gradient="gossamer" />}
           <InternalLink to="/learn/">
             <Caps m={0} py={4}>
               Learn
@@ -50,7 +51,7 @@ const Nav = () => (
           justifyContent="center"
           css={{ position: "relative" }}
         >
-          <GradientBar gradient="gossamer" />
+          {page === "news" && <GradientBar gradient="tapestry" />}
           <InternalLink to="/news/">
             <Caps m={0} py={4}>
               News
@@ -61,5 +62,9 @@ const Nav = () => (
     </Container>
   </Box>
 );
+
+Nav.propTypes = {
+  page: PropTypes.oneOf("developers", "learn", "news")
+};
 
 export default Nav;

@@ -5,7 +5,7 @@ import PropTypes from "prop-types";
 
 const GradientBar = ({ gradient, gradientHeight, ...rest }) => {
   const gradientTypes = {
-    gossamer: "linear-gradient(to right, #1D566D, #44EBA5);",
+    gossamer: "linear-gradient(to left, #1D566D, #44EBA5);",
     richblue: "linear-gradient(to right, #6672E5, #43458A);",
     tapestry: "linear-gradient(to right, #F67180, #6B567A);"
   };
