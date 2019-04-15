@@ -16,7 +16,7 @@ const IndexPage = () => (
   <Layout>
     <SEO title="News" />
 
-    <GradientBar gradient="tapestry" />
+    <GradientBar gradient="tapestry" sticky />
 
     <Container px={[4, 0]}>
       <News mb={4} mt={[6, 7]} />

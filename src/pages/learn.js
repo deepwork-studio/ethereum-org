@@ -43,11 +43,23 @@ const ResourceCard = styled(Card).attrs({
   }
 `;
 
+const Sidebar = styled(Box).attrs({
+  mr: [0, 4],
+  mb: 4
+})`
+  @media screen and (min-width: 52em) {
+    position: sticky;
+    position: --webkit-sticky;
+    top: calc(16px + 6px);
+    height: 100%;
+  }
+`;
+
 const IndexPage = () => (
   <Layout>
     <SEO title="Learn" />
 
-    <GradientBar gradient="gossamer" />
+    <GradientBar gradient="gossamer" sticky />
 
     <Box as="section" mt={[128 + 6, 256 + 6]} mb={[6, 7]}>
       <Container px={[4, 0]}>
@@ -65,7 +77,7 @@ const IndexPage = () => (
       <Container px={[4, 0]}>
         <Flex flexDirection={["column", "row"]}>
           {/* Sidebar */}
-          <Box mr={[0, 4]} mb={4}>
+          <Sidebar>
             <Paragraph mt={0} mb={3} lineHeight="double">
               <Text fontWeight="bold" as="span">
                 The how and the why
@@ -88,7 +100,7 @@ const IndexPage = () => (
             <Paragraph>Latest Projects Updates</Paragraph>
 
             <Paragraph>Latest Projects</Paragraph>
-          </Box>
+          </Sidebar>
 
           {/* Content */}
           <Box flex={1}>

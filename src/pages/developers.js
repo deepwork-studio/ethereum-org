@@ -59,7 +59,7 @@ const IndexPage = () => (
   <Layout>
     <SEO title="Developers" />
 
-    <GradientBar gradient="richblue" />
+    <GradientBar gradient="richblue" sticky />
 
     <Box as="section" mt={[128 + 6, 256 + 6]} mb={[6, 7]}>
       <Container px={[4, 0]}>
