@@ -47,7 +47,7 @@ const Sidebar = styled(Box).attrs({
   mr: [0, 4],
   mb: 4
 })`
-  @media screen and (min-width: 52em) {
+  @media screen and (min-width: 64em) {
     position: sticky;
     position: --webkit-sticky;
     top: calc(16px + 6px);
@@ -62,7 +62,7 @@ const IndexPage = () => (
     <GradientBar gradient="gossamer" sticky />
 
     <Box as="section" my={[6, 7]}>
-      <Container px={[4, 0]}>
+      <Container>
         <Box>
           <Learn />
           <Caps mt={4} mb={2}>
@@ -74,8 +74,8 @@ const IndexPage = () => (
     </Box>
 
     <Box my={[6, 7]}>
-      <Container px={[4, 0]}>
-        <Flex flexDirection={["column", "row"]}>
+      <Container>
+        <Flex flexDirection={["column", null,null, "row"]}>
           {/* Sidebar */}
           <Sidebar>
             <Paragraph mt={0} mb={3} lineHeight="double">
@@ -122,7 +122,7 @@ const IndexPage = () => (
                         src="https://picsum.photos/1440/900/?random"
                       />
                     </Box>
-                    <Header color="inherit" mt={3}>
+                    <Header lineHeight="title" color="inherit" mt={3}>
                       Fair Financial Dist.
                     </Header>
                     <Paragraph mt={3} mb={0}>
@@ -149,7 +149,7 @@ const IndexPage = () => (
                         src="https://picsum.photos/1280/720/?random"
                       />
                     </Box>
-                    <Header color="inherit" mt={3}>
+                    <Header lineHeight="title" color="inherit" mt={3}>
                       The Internet Money
                     </Header>
                     <Paragraph mt={3} mb={0}>
@@ -176,7 +176,7 @@ const IndexPage = () => (
                         src="https://picsum.photos/720/480/?random"
                       />
                     </Box>
-                    <Header color="inherit" mt={3}>
+                    <Header lineHeight="title" color="inherit" mt={3}>
                       Own your own value
                     </Header>
                     <Paragraph mt={3} mb={0}>
@@ -203,7 +203,7 @@ const IndexPage = () => (
                         src="https://picsum.photos/1336/768/?random"
                       />
                     </Box>
-                    <Header color="inherit" mt={3}>
+                    <Header lineHeight="title" color="inherit" mt={3}>
                       Democratize the internet
                     </Header>
                     <Paragraph mt={3} mb={0}>

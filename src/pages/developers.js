@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import styled, { css } from "styled-components";
 import { Box, Image, Flex } from "rebass";
 
@@ -24,7 +24,11 @@ import virtual from "../images/developers-virtual.svg";
 
 const CallToActionCard = ({ image, children, ...rest }) => (
   <Card {...rest} shadow bg="primary">
-    <Box p={56} pl={120} css={{ position: "relative", overflow: "hidden" }}>
+    <Box
+      py={56}
+      pl={[80, null, 120]}
+      css={{ position: "relative", overflow: "hidden" }}
+    >
       <GradientBar
         gradient="richblue"
         gradientHeight="thin"
@@ -39,12 +43,16 @@ const CallToActionCard = ({ image, children, ...rest }) => (
       />
       <Image
         src={image}
-        css={{
-          position: "absolute",
-          left: -32,
-          top: "50%",
-          transform: "translateY(-50%)"
-        }}
+        css={css`
+          position: absolute;
+          left: -64px;
+          top: 50%;
+          transform: translateY(-50%);
+
+          @media screen and (min-width: 52em) {
+            left: -32px;
+          }
+        `}
       />
       {children}
     </Box>
@@ -59,6 +67,130 @@ const HoverHeader = styled(Header)`
   }
 `;
 
+const DeveloperTab = ({ active, children, ...rest }) => (
+  <Flex css={{ cursor: "pointer" }} {...rest}>
+    <Box
+      width={6}
+      bg={active ? "richblue" : "transparent"}
+      css={{ transition: "background-color 250ms" }}
+    />
+    <Box ml={24} flex={1} color={active ? "text" : "textopaque"}>
+      {children}
+    </Box>
+  </Flex>
+);
+
+const DeveloperImage = ({ active, ...rest }) => (
+  <Image
+    css={{
+      opacity: active ? 1 : 0,
+      verticalAlign: "middle",
+      transition: "opacity 250ms 125ms ease-in-out",
+      position: "absolute",
+      transform: "scale(1.25)",
+      zIndex: 99999
+    }}
+    {...rest}
+  />
+);
+
+const DeveloperIdeas = () => {
+  const [activeTab, setActiveTab] = useState(0);
+
+  return (
+    <>
+      <Row
+        css={css`
+          display: none;
+
+          @media screen and (min-width: 52em) {
+            display: flex;
+          }
+        `}
+      >
+        <Col>
+          <DeveloperTab
+            mb={4}
+            onClick={() => setActiveTab(0)}
+            active={activeTab === 0 && true}
+          >
+            <Header color="inherit">Scalability</Header>
+            <Paragraph color="inherit" mb={0}>
+              Join one of the teams working on scaling Ethereum to millions of
+              transactions a second.
+            </Paragraph>
+          </DeveloperTab>
+
+          <DeveloperTab
+            mb={4}
+            onClick={() => setActiveTab(1)}
+            active={activeTab === 1 && true}
+          >
+            <Header color="inherit">Be your own bank</Header>
+            <Paragraph color="inherit" mb={0}>
+              Use Ethereum’s shared global infrastructure to create unstoppable
+              finanical tools.
+            </Paragraph>
+          </DeveloperTab>
+
+          <DeveloperTab
+            onClick={() => setActiveTab(2)}
+            active={activeTab === 2 && true}
+          >
+            <Header color="inherit">Virtual Organizations</Header>
+            <Paragraph color="inherit" mb={0}>
+              Create a democratic autonomous organization with governance
+              structures.
+            </Paragraph>
+          </DeveloperTab>
+        </Col>
+
+        <Col>
+          <Flex flex={1} alignItems="center" justifyContent="center">
+            <Box
+              mt={[4, 0]}
+              bg="primary"
+              width={320}
+              css={{ position: "relative", height: 320 }}
+            >
+              <DeveloperImage src={scale} active={activeTab === 0 && true} />
+
+              <DeveloperImage src={bank} active={activeTab === 1 && true} />
+
+              <DeveloperImage src={virtual} active={activeTab === 2 && true} />
+            </Box>
+          </Flex>
+        </Col>
+      </Row>
+      <Box
+        css={css`
+          display: initial;
+
+          @media screen and (min-width: 52em) {
+            display: none;
+          }
+        `}
+      >
+        <Header>Scalability</Header>
+        <Paragraph mb={4}>
+          Join one of the teams working on scaling Ethereum to millions of
+          transactions a second.
+        </Paragraph>
+        <Header>Be your own bank</Header>
+        <Paragraph mb={4}>
+          Use Ethereum’s shared global infrastructure to create unstoppable
+          finanical tools.
+        </Paragraph>
+        <Header>Virtual Organizations</Header>
+        <Paragraph mb={0}>
+          Create a democratic autonomous organization with governance
+          structures.
+        </Paragraph>
+      </Box>
+    </>
+  );
+};
+
 const IndexPage = () => (
   <Layout>
     <SEO title="Developers" />
@@ -66,7 +198,7 @@ const IndexPage = () => (
     <GradientBar gradient="richblue" sticky />
 
     <Box as="section" my={[6, 7]}>
-      <Container px={[4, 0]}>
+      <Container>
         <Box>
           <Developers />
           <Caps mt={4} mb={2}>
@@ -78,80 +210,19 @@ const IndexPage = () => (
     </Box>
 
     <Box my={[6, 7]}>
-      <Container px={[4, 0]}>
+      <Container>
         <Paragraph mt={0} mb={5}>
           Ideas voted by the Ethereum community:
         </Paragraph>
 
-        <Row>
-          <Col>
-            <Box mb={4}>
-              <Header>Scalability</Header>
-              <Paragraph>
-                Join one of the teams working on scaling Ethereum to millions of
-                transactions a second.
-              </Paragraph>
-            </Box>
-
-            <Box mb={4}>
-              <Header>Be your own bank</Header>
-              <Paragraph>
-                Use Ethereum’s shared global infrastructure to create
-                unstoppable finanical tools.
-              </Paragraph>
-            </Box>
-
-            <Box>
-              <Header>Virtual Organizations</Header>
-              <Paragraph>
-                Create a democratic autonomous organization with governance
-                structures.
-              </Paragraph>
-            </Box>
-          </Col>
-          <Col>
-            <Flex flex={1} alignItems="center" justifyContent="center">
-              <Box
-                bg="primary"
-                css={{ position: "relative", height: 320, width: 320 }}
-              >
-                <Image
-                  src={scale}
-                  css={{
-                    position: "absolute",
-                    transform: "scale(1.25)",
-                    zIndex: 99999
-                  }}
-                />
-
-                {/* <Image
-                  src={bank}
-                  css={{
-                    position: "absolute",
-                    transform: "scale(1.25)",
-                    zIndex: 99999
-                  }}
-                /> */}
-
-                {/* <Image
-                  src={virtual}
-                  css={{
-                    position: "absolute",
-                    transform: "scale(1.25)",
-                    zIndex: 99999
-                  }}
-                /> */}
-              </Box>
-            </Flex>
-          </Col>
-        </Row>
+        <DeveloperIdeas />
       </Container>
     </Box>
 
     <Box my={[6, 7, 8]}>
-      <Container px={[4, 0]}>
-        <Row>
-          <Col mb={[4, 0]}>
+      <Container>
+        <Row flexDirection={["column", null, "row"]}>
+          <Col mb={[4, null, 0]} width={[1, null, 1 / 2]}>
             <ExternalLink flex={1} href="https://ethereum.org/">
               <CallToActionCard image={smartContractBadge}>
                 <HoverHeader>Start Building</HoverHeader>
@@ -161,7 +232,7 @@ const IndexPage = () => (
               </CallToActionCard>
             </ExternalLink>
           </Col>
-          <Col mb={[4, 0]}>
+          <Col width={[1, null, 1 / 2]}>
             <ExternalLink flex={1} href="https://ethereum.org/">
               <CallToActionCard image={solidityBadge}>
                 <HoverHeader>Learn Solidity</HoverHeader>
@@ -178,5 +249,4 @@ const IndexPage = () => (
     <Stunt />
   </Layout>
 );
-
 export default IndexPage;

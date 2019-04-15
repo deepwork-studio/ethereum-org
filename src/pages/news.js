@@ -60,7 +60,7 @@ const IndexPage = () => (
     <GradientBar gradient="tapestry" sticky />
 
     <Box as="section" my={[6, 7]}>
-      <Container px={[4, 0]}>
+      <Container>
         <Box>
           <News />
           <Caps mt={4} mb={2}>
@@ -72,7 +72,7 @@ const IndexPage = () => (
     </Box>
 
     <Box my={[6, 7]}>
-      <Container px={[4, 0]}>
+      <Container>
         <Flex flexDirection={["column", null, "row"]}>
           {/* Content */}
           <Box flex={1} mr={[0, 4]}>
@@ -100,7 +100,7 @@ const IndexPage = () => (
             flexDirection="column"
             alignItems="center"
             justifyContent="center"
-            width={300}
+            width={[1, null,  300]}
             css={{ height: 300 }}
           >
             <Caps textAlign="center" mt={0} mb={3}>

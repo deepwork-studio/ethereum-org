@@ -7,7 +7,7 @@ import { ExternalLink } from "../Links";
 
 const Stunt = () => (
   <Box bg="primary" py={[6, 7]}>
-    <Container px={[4, 0]}>
+    <Container>
       <Paragraph>
         This site is a demo project by the team at Deep Work Studio
       </Paragraph>

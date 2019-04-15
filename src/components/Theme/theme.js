@@ -25,7 +25,8 @@ export default {
     primary: "#14151D",
     text: "#C8D3F0",
     textdark: "#B6BBCF",
-    textinactive: "rgba(175, 188, 219, 0.70)"
+    textinactive: "rgba(175, 188, 219, 0.70)",
+    textopaque: "rgba(175, 188, 219, 0.50)"
   },
   space: [0, 4, 8, 16, 32, 64, 128, 256, 336],
   fonts: {

@@ -29,11 +29,16 @@ const IndexPage = () => (
     <SEO />
 
     <Flex css={{ minHeight: "100vh" }} alignItems="center">
-      <Container px={[4, 0]}>
-        <Logo mb={5} mt={[4, 0]} />
+      <Container>
+        <Logo mt={[4, 0]} />
 
-        <Row>
-          <Col width={[null, 1 / 3]} mb={[4, 0]}>
+        <Paragraph mt={[3, 4]} mb={[4, 5]}>
+          The worlds largest community solving global challenges and
+          democratizing the internet.
+        </Paragraph>
+
+        <Row flexDirection={["column", null, "row"]}>
+          <Col width={[1, null, 1 / 3]} mb={[4, null, 0]}>
             <InternalLink flex={1} to="/developers/">
               <IndexPageCard>
                 <GradientBar gradient="richblue" />
@@ -48,7 +53,7 @@ const IndexPage = () => (
             </InternalLink>
           </Col>
 
-          <Col width={[null, 1 / 3]} mb={[4, 0]}>
+          <Col width={[1, null, 1 / 3]} mb={[4, null, 0]}>
             <InternalLink flex={1} to="/learn/">
               <IndexPageCard>
                 <GradientBar gradient="gossamer" />
@@ -63,7 +68,7 @@ const IndexPage = () => (
             </InternalLink>
           </Col>
 
-          <Col width={[null, 1 / 3]} mb={[4, 0]}>
+          <Col width={[1, null, 1 / 3]} mb={[4, null, 0]}>
             <InternalLink flex={1} to="/news/">
               <IndexPageCard>
                 <GradientBar gradient="tapestry" />
@@ -78,11 +83,6 @@ const IndexPage = () => (
             </InternalLink>
           </Col>
         </Row>
-
-        <Paragraph mt={[4, 5]}>
-          The worlds largest community solving global challenges and
-          democratizing the internet.
-        </Paragraph>
       </Container>
     </Flex>
   </Layout>
