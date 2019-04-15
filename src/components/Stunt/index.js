@@ -11,7 +11,7 @@ const Stunt = () => (
       <Paragraph>
         This site is a demo project by the team at Deep Work Studio
       </Paragraph>
-      <ExternalLink color="textinactive" href="https://medium.com">
+      <ExternalLink color="textinactive" href="https://medium.com/deep-work-studio">
         Learn why we did this →
       </ExternalLink>
     </Container>
