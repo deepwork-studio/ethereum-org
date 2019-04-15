@@ -17,6 +17,7 @@ export default {
   },
   colors: {
     gossamer: "#31A28A",
+    gossamerlight: "#00B28C",
     richblue: "#535AB4",
     tapestrydark: "#6B567A",
     tapestry: "#A8627D",

@@ -29,7 +29,7 @@ const ResourceCard = styled(Card).attrs({
 
   &:hover {
     background-color: ${theme.colors.primary};
-    color: ${theme.colors.gossamer};
+    color: ${theme.colors.gossamerlight};
   }
 
   /* Allow nested Header component to animate  */
@@ -87,8 +87,8 @@ const IndexPage = () => (
             </Paragraph>
 
             <Flex>
-              <Box width={4} mr={3} bg="gossamer" />
-              <Paragraph fontWeight="bold" color="gossamer" my={1}>
+              <Box width={4} mr={3} bg="gossamerlight" />
+              <Paragraph fontWeight="bold" color="gossamerlight" my={1}>
                 Mission and Vision
               </Paragraph>
             </Flex>
