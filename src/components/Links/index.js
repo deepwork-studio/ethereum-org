@@ -26,7 +26,7 @@ const ExternalLink = props => (
 );
 
 const InternalLink = styled(GatsbyLink)(
-  { ...linkStyles, color: "initial" },
+  {...linkStyles, color: "inherit"},
   space,
   width,
   fontSize,
