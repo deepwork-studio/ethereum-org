@@ -226,17 +226,17 @@ const IndexPage = () => (
       <Container>
         <Row flexDirection={["column", null, "row"]}>
           <Col mb={[4, null, 0]} width={[1, null, 1 / 2]}>
-            <ExternalLink flex={1} href="https://ethereum.org/">
+            <ExternalLink flex={1} href="https://solidity.readthedocs.io/en/v0.5.7/">
               <CallToActionCard image={smartContractBadge}>
                 <HoverHeader>Start Building</HoverHeader>
                 <Header as="p" fontWeight="medium">
-                  Smart Contract Docs
+                  Ethereum Docs
                 </Header>
               </CallToActionCard>
             </ExternalLink>
           </Col>
           <Col width={[1, null, 1 / 2]}>
-            <ExternalLink flex={1} href="https://ethereum.org/">
+            <ExternalLink flex={1} href="https://solidity.readthedocs.io/en/v0.5.7/">
               <CallToActionCard image={solidityBadge}>
                 <HoverHeader>Learn Solidity</HoverHeader>
                 <Header as="p" fontWeight="medium">
