@@ -18,7 +18,8 @@ const GradientBar = ({ gradient, gradientHeight, ...rest }) => {
   return (
     <Box
       css={css`
-        position: absolute;
+        position: ${props => (props.sticky ? "fixed" : "absolute")};
+        z-index: ${props => (props.sticky ? 99999 : "unset")};
         left: 0;
         right: 0;
         top: 0;
