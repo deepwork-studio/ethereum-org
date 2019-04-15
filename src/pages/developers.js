@@ -1,6 +1,6 @@
 import React from "react";
 import styled, { css } from "styled-components";
-import { Box, Image } from "rebass";
+import { Box, Image, Flex } from "rebass";
 
 import Layout from "../components/Layout";
 import SEO from "../components/SEO";
@@ -17,6 +17,10 @@ import theme from "../components/Theme/theme";
 
 import smartContractBadge from "../images/smart-contract.svg";
 import solidityBadge from "../images/solidity.svg";
+
+import bank from "../images/developers-bank.svg";
+import scale from "../images/developers-scale.svg";
+import virtual from "../images/developers-virtual.svg";
 
 const CallToActionCard = ({ image, children, ...rest }) => (
   <Card {...rest} shadow bg="primary">
@@ -106,7 +110,39 @@ const IndexPage = () => (
             </Box>
           </Col>
           <Col>
-            <Box ml={5} flex={1} bg="primary" />
+            <Flex flex={1} alignItems="center" justifyContent="center">
+              <Box
+                bg="primary"
+                css={{ position: "relative", height: 320, width: 320 }}
+              >
+                <Image
+                  src={scale}
+                  css={{
+                    position: "absolute",
+                    transform: "scale(1.25)",
+                    zIndex: 99999
+                  }}
+                />
+
+                {/* <Image
+                  src={bank}
+                  css={{
+                    position: "absolute",
+                    transform: "scale(1.25)",
+                    zIndex: 99999
+                  }}
+                /> */}
+
+                {/* <Image
+                  src={virtual}
+                  css={{
+                    position: "absolute",
+                    transform: "scale(1.25)",
+                    zIndex: 99999
+                  }}
+                /> */}
+              </Box>
+            </Flex>
           </Col>
         </Row>
       </Container>

@@ -29,7 +29,8 @@ const ArticleLink = styled(ExternalLink)`
     transition: color 250ms;
   }
 
-  &:hover {
+  &:hover,
+  &:focus {
     ${Text} {
       color: ${theme.colors.tapestry};
     }
@@ -74,7 +75,7 @@ const IndexPage = () => (
       <Container px={[4, 0]}>
         <Flex flexDirection={["column", null, "row"]}>
           {/* Content */}
-          <Box flex={1}>
+          <Box flex={1} mr={[0, 4]}>
             <NewsArticle
               date="13 April 2019"
               href="https://cointelegraph.com/news/ethereum-core-developers-consider-more-frequent-and-smaller-hard-forks"
@@ -94,18 +95,18 @@ const IndexPage = () => (
 
           {/* Sidebar */}
           <Flex
-            py={80}
-            px={5}
-            ml={4}
+            mx={["auto", null, "unset"]}
             bg="primary"
             flexDirection="column"
             alignItems="center"
             justifyContent="center"
+            width={300}
+            css={{ height: 300 }}
           >
-            <Caps textAlign="center" my={3}>
+            <Caps textAlign="center" mt={0} mb={3}>
               Contact
             </Caps>
-            <Text mb={3} fontFamily="worksans">
+            <Text my={0} fontFamily="worksans">
               <ExternalLink
                 color="tapestrylight"
                 href="mailto:media@ethereum.org"
