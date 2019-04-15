@@ -13,8 +13,7 @@ import {
 } from "styled-system";
 
 const linkStyles = {
-  textDecoration: "none",
-  color: "initial"
+  textDecoration: "none"
 };
 
 const ExternalLink = props => (
@@ -27,7 +26,7 @@ const ExternalLink = props => (
 );
 
 const InternalLink = styled(GatsbyLink)(
-  linkStyles,
+  { ...linkStyles, color: "initial" },
   space,
   width,
   fontSize,
