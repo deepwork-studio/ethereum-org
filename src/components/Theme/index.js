@@ -9,6 +9,8 @@ const GlobalStyle = createGlobalStyle`
 	  -moz-osx-font-smoothing: grayscale;
 
     background-color: ${props => props.theme.colors.primarydark};
+
+    font-family: ${props => props.theme.fonts.worksans};
   }
 `;
 

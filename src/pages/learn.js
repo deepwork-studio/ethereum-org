@@ -61,7 +61,7 @@ const IndexPage = () => (
 
     <GradientBar gradient="gossamer" sticky />
 
-    <Box as="section" mt={[128 + 6, 256 + 6]} mb={[6, 7]}>
+    <Box as="section" my={[6, 7]}>
       <Container px={[4, 0]}>
         <Box>
           <Learn />

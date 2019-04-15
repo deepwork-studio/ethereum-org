@@ -1,5 +1,5 @@
 import React from "react";
-import { Box } from "rebass";
+import { Box, Text } from "rebass";
 
 import Container from "../Container";
 import Paragraph from "../Paragraph";
@@ -11,9 +11,14 @@ const Stunt = () => (
       <Paragraph>
         This site is a demo project by the team at Deep Work Studio
       </Paragraph>
-      <ExternalLink color="textinactive" href="https://medium.com/deep-work-studio">
-        Learn why we did this →
-      </ExternalLink>
+      <Text fontFamily="worksans">
+        <ExternalLink
+          color="textinactive"
+          href="https://medium.com/deep-work-studio"
+        >
+          Learn why we did this →
+        </ExternalLink>
+      </Text>
     </Container>
   </Box>
 );
