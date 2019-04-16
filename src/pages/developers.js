@@ -14,7 +14,7 @@ import { Developers } from "../components/Images";
 import Stunt from "../components/Stunt";
 import { ExternalLink } from "../components/Links";
 import theme from "../components/Theme/theme";
-import Nav from "../components/Nav";
+// import Nav from "../components/Nav";
 
 import smartContractBadge from "../images/smart-contract.svg";
 import solidityBadge from "../images/solidity.svg";
@@ -198,7 +198,7 @@ const IndexPage = () => (
 
     <GradientBar gradient="richblue" sticky />
 
-    <Nav page="developers" />
+    {/* <Nav page="developers" /> */}
 
     <Box as="section" my={[6, 7]}>
       <Container>

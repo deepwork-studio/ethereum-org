@@ -14,7 +14,7 @@ import { Learn } from "../components/Images";
 import Stunt from "../components/Stunt";
 import { ExternalLink } from "../components/Links";
 import theme from "../components/Theme/theme";
-import Nav from "../components/Nav";
+// import Nav from "../components/Nav";
 
 const ResourceCard = styled(Card).attrs({
   p: 3,
@@ -236,7 +236,7 @@ const IndexPage = () => (
   <Layout>
     <SEO title="Learn" />
 
-    <Nav page="learn" />
+    {/* <Nav page="learn" /> */}
 
     <GradientBar gradient="gossamer" sticky />
 

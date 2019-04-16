@@ -14,7 +14,7 @@ import { News } from "../components/Images";
 import Stunt from "../components/Stunt";
 import { ExternalLink } from "../components/Links";
 import theme from "../components/Theme/theme";
-import Nav from "../components/Nav";
+// import Nav from "../components/Nav";
 
 const ArticleTitle = styled(Text).attrs({
   fontSize: ["large", "xlarge"],
@@ -58,7 +58,7 @@ const IndexPage = () => (
   <Layout>
     <SEO title="News" />
 
-    <Nav page="news" />
+    {/* <Nav page="news" /> */}
 
     <GradientBar gradient="tapestry" sticky />
 
