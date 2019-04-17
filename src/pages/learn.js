@@ -125,7 +125,7 @@ const LearnTabs = () => {
             The how and the why
           </Text>
           <Text as="br" />
-          Top voted community resources:
+          Community resources:
         </Paragraph>
 
         <LearnTopic

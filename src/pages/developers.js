@@ -212,7 +212,7 @@ const IndexPage = () => (
     <Box my={[5, 6]}>
       <Container>
         <Paragraph mt={0} mb={5}>
-          Ideas voted by the Ethereum community:
+          Ideas proposed in the Ethereum community:
         </Paragraph>
 
         <DeveloperIdeas />
