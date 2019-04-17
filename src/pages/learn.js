@@ -14,6 +14,7 @@ import { Learn } from "../components/Images";
 import Stunt from "../components/Stunt";
 import { ExternalLink } from "../components/Links";
 import theme from "../components/Theme/theme";
+import { useSiteMetadata } from "../hooks";
 
 const ResourceCard = styled(Card).attrs({
   p: 3,
@@ -55,105 +56,49 @@ const Sidebar = styled(Box).attrs({
   }
 `;
 
-const LearnArticles = () => (
-  <Row flexWrap="wrap">
-    <Col mb={4}>
-      <ExternalLink href="https://ethereum.org" css={{ height: "100%" }}>
-        <ResourceCard>
-          <Box mx={-3} mt={-3} flex={1} css={{ height: 200 }}>
-            <Image
-              css={{
-                objectFit: "cover",
-                width: "100%",
-                height: "100%",
-                objectPosition: "center"
-              }}
-              src="https://picsum.photos/1440/900/?random"
-            />
-          </Box>
-          <Header lineHeight="title" color="inherit" mt={3}>
-            Fair Financial Dist.
-          </Header>
-          <Paragraph mt={3} mb={0}>
-            Odds are you’ve heard about the Ethereum blockchain. So what is it?
-          </Paragraph>
-        </ResourceCard>
-      </ExternalLink>
-    </Col>
-    <Col mb={4}>
-      <ExternalLink href="https://ethereum.org" css={{ height: "100%" }}>
-        <ResourceCard>
-          <Box mx={-3} mt={-3} flex={1} css={{ height: 200 }}>
-            <Image
-              css={{
-                objectFit: "cover",
-                width: "100%",
-                height: "100%",
-                objectPosition: "center"
-              }}
-              src="https://picsum.photos/1280/720/?random"
-            />
-          </Box>
-          <Header lineHeight="title" color="inherit" mt={3}>
-            The Internet Money
-          </Header>
-          <Paragraph mt={3} mb={0}>
-            A collection of talks by Andreas M. Antonopoulos about why
-            blockchain matters.
-          </Paragraph>
-        </ResourceCard>
-      </ExternalLink>
-    </Col>
-    <Col mb={4}>
-      <ExternalLink href="https://ethereum.org" css={{ height: "100%" }}>
-        <ResourceCard>
-          <Box mx={-3} mt={-3} flex={1} css={{ height: 200 }}>
-            <Image
-              css={{
-                objectFit: "cover",
-                width: "100%",
-                height: "100%",
-                objectPosition: "center"
-              }}
-              src="https://picsum.photos/720/480/?random"
-            />
-          </Box>
-          <Header lineHeight="title" color="inherit" mt={3}>
-            Own your own value
-          </Header>
-          <Paragraph mt={3} mb={0}>
-            Check out the many great projects on State of the Dapps being built
-            on Ethereum.
-          </Paragraph>
-        </ResourceCard>
-      </ExternalLink>
-    </Col>
-    <Col mb={4}>
-      <ExternalLink href="https://ethereum.org" css={{ height: "100%" }}>
-        <ResourceCard>
-          <Box mx={-3} mt={-3} flex={1} css={{ height: 200 }}>
-            <Image
-              css={{
-                objectFit: "cover",
-                width: "100%",
-                height: "100%",
-                objectPosition: "center"
-              }}
-              src="https://picsum.photos/1336/768/?random"
-            />
-          </Box>
-          <Header lineHeight="title" color="inherit" mt={3}>
-            Democratize the internet
-          </Header>
-          <Paragraph mt={3} mb={0}>
-            Check out the many great projects on State of the Dapps being built
-            on Ethereum.
-          </Paragraph>
-        </ResourceCard>
-      </ExternalLink>
-    </Col>
-  </Row>
-);
+const LearnArticles = ({ category }) => {
+  const { learn } = useSiteMetadata();
+
+  return (
+    <Row flexWrap="wrap">
+      {learn[category].map((article, index) => (
+        <Col key={index} mb={4}>
+          <ExternalLink href={article.link} css={{ height: "100%" }}>
+            <ResourceCard>
+              <Box
+                mx={-3}
+                mt={-3}
+                flex={1}
+                css={{
+                  height: 200,
+                  backgroundImage: "linear-gradient(to left, #1D566D, #44EBA5)"
+                }}
+              >
+                {article.image !== "" && (
+                  <Image
+                    css={{
+                      objectFit: "cover",
+                      width: "100%",
+                      height: "100%",
+                      objectPosition: "center"
+                    }}
+                    src={article.image}
+                  />
+                )}
+              </Box>
+              <Header lineHeight="title" color="inherit" mt={3}>
+                {article.title}
+              </Header>
+              <Paragraph mt={3} mb={0}>
+                {article.subtitle}
+              </Paragraph>
+            </ResourceCard>
+          </ExternalLink>
+        </Col>
+      ))}
+    </Row>
+  );
+};
 
 const LearnTopic = ({ active, children, ...rest }) => (
   <Flex {...rest} mb={2} css={{ cursor: "pointer" }}>
@@ -169,7 +114,7 @@ const LearnTopic = ({ active, children, ...rest }) => (
 );
 
 const LearnTabs = () => {
-  const [activeTab, setActiveTab] = useState(0);
+  const [activeTab, setActiveTab] = useState("Current_Applications");
 
   return (
     <Flex flexDirection={["column", null, null, "row"]}>
@@ -184,22 +129,22 @@ const LearnTabs = () => {
         </Paragraph>
 
         <LearnTopic
-          onClick={() => setActiveTab(0)}
-          active={activeTab === 0 && true}
+          onClick={() => setActiveTab("Current_Applications")}
+          active={activeTab === "Current_Applications" && true}
         >
           Current Applications
         </LearnTopic>
 
         <LearnTopic
-          onClick={() => setActiveTab(1)}
-          active={activeTab === 1 && true}
+          onClick={() => setActiveTab("Value_Exchange")}
+          active={activeTab === "Value_Exchange" && true}
         >
           Value Exchange
         </LearnTopic>
 
         <LearnTopic
-          onClick={() => setActiveTab(2)}
-          active={activeTab === 2 && true}
+          onClick={() => setActiveTab("Censorship")}
+          active={activeTab === "Censorship" && true}
         >
           Censorship
         </LearnTopic>
@@ -207,9 +152,7 @@ const LearnTabs = () => {
 
       {/* Content */}
       <Box flex={1}>
-        {activeTab === 0 && <LearnArticles />}
-        {activeTab === 1 && <LearnArticles />}
-        {activeTab === 2 && <LearnArticles />}
+        <LearnArticles category={activeTab} />
       </Box>
     </Flex>
   );

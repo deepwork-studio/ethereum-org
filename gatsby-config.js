@@ -15,33 +15,33 @@ module.exports = {
     learn: {
       "Current Applications": [
         {
-          title: ``,
-          subtitle: ``,
-          image: ``,
-          link: `https://www.notion.so/deepworkstudio/Ethereum-57ac0bf920714551ac017a1cd874e8ed#1c1ea0d7c22d4026843999f5b446c651`
-        },
-        {
-          title: ``,
-          subtitle: ``,
-          image: ``,
+          title: `Digital Cats?!`,
+          subtitle: `CryptoKitties is a game centered around breedable, collectible, and oh-so-adorable creatures we call CryptoKitties!`,
+          image: `https://www.cryptokitties.co/images/share.png`,
           link: `https://www.cryptokitties.co/`
         },
         {
-          title: ``,
-          subtitle: ``,
-          image: ``,
+          title: `My Cat Is Better than Yours`,
+          subtitle: `How CryptoKitties are different from Bitcoins and real cats — and why that matters`,
+          image: `https://cdn-images-1.medium.com/max/1000/1*3swNWJqRX7h47_gXvPEScQ.png`,
+          link: `https://medium.com/cryptokitties/what-the-heck-is-a-cryptokitty-4e14752e58c`
+        },
+        {
+          title: `Changing the way we collaborate.`,
+          subtitle: `The Bounties Network empowers humans to incentivize and self-organize, from freelancing to grassroots social action, and anything in between.`,
+          image: `https://cdn-images-1.medium.com/max/1000/1*ywSIL1SNhUY6CnVLxjwKMg.png`,
           link: `https://bounties.network/`
         },
         {
-          title: ``,
-          subtitle: ``,
-          image: ``,
+          title: `A New Way to Access the Web`,
+          subtitle: `Chat, browse and transact securely in an open source community committed to bringing the power of Ethereum and a more distributed internet to your pocket.`,
+          image: `https://our.status.im/content/images/2019/03/Release-cover-0.11.0.png`,
           link: `https://dev.status.im/`
         },
         {
-          title: ``,
-          subtitle: ``,
-          image: ``,
+          title: `A New Internet?`,
+          subtitle: `Loom Network is building our Layer 2 on top of Ethereum, instead of other blockchain platforms — and here’s why.`,
+          image: `https://cdn-images-1.medium.com/max/1000/1*9gSuypCiTrSwMCy18OJdyg.png`,
           link: `https://medium.com/loom-network/ethereum-will-be-the-backbone-of-the-new-internet-88718e08124f`
         }
       ],
