@@ -7,6 +7,28 @@ const useSiteMetadata = () => {
         site {
           siteMetadata {
             title
+            description
+            author
+            learn {
+              Censorship {
+                title
+                subtitle
+                image
+                link
+              }
+              Current_Applications {
+                title
+                subtitle
+                image
+                link
+              }
+              Value_Exchange {
+                title
+                subtitle
+                image
+                link
+              }
+            }
           }
         }
       }
