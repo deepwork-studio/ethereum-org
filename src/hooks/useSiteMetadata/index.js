@@ -9,6 +9,13 @@ const useSiteMetadata = () => {
             title
             description
             author
+            news {
+              articles {
+                date
+                title
+                link
+              }
+            }
             learn {
               Censorship {
                 title

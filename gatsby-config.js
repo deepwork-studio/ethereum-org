@@ -6,10 +6,25 @@ module.exports = {
     news: {
       articles: [
         {
-          date: ``,
-          title: ``,
-          link: ``
-        }
+          date: `16 April 2019`,
+          title: `Major Auditing Firm Ernst & Young Releases Updates to Two Blockchain-Related Products`,
+          link: `https://cointelegraph.com/news/major-auditing-firm-ernst-young-releases-updates-to-two-blockchain-related-products`
+        },
+        {
+          date: `13 April 2019`,
+          title: `Ethereum Core Developers Consider More Frequent and Smaller Hard Forks`,
+          link: `https://cointelegraph.com/news/ethereum-core-developers-consider-more-frequent-and-smaller-hard-forks`
+        },
+        {
+          date: `10 April 2019`,
+          title: `Blockchain Prediction Platform Augur to Launch Stablecoin DAI-Denominated Markets`,
+          link: `https://cointelegraph.com/news/blockchain-prediction-platform-augur-to-launch-stablecoin-dai-denominated-markets`
+        },
+        {
+          date: `09 April 2019`,
+          title: `Cryptocurrency Lending Firm Dharma Launches Its Service to the Public`,
+          link: `https://cointelegraph.com/news/cryptocurrency-lending-firm-dharma-launches-its-service-to-the-public`
+        },
       ]
     },
     learn: {

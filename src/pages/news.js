@@ -12,6 +12,7 @@ import { News } from "../components/Images";
 import Stunt from "../components/Stunt";
 import { ExternalLink } from "../components/Links";
 import theme from "../components/Theme/theme";
+import { useSiteMetadata } from "../hooks";
 
 const ArticleTitle = styled(Text).attrs({
   fontSize: ["large", "xlarge"],
@@ -51,6 +52,25 @@ const NewsArticle = ({ date, title, href, ...rest }) => (
   </ArticleLink>
 );
 
+const NewsArticles = ({}) => {
+  const {
+    news: { articles }
+  } = useSiteMetadata();
+
+  return (
+    <>
+      {articles.map((article, index) => (
+        <NewsArticle
+          key={index}
+          date={article.date}
+          href={article.link}
+          title={article.title}
+        />
+      ))}
+    </>
+  );
+};
+
 const IndexPage = () => (
   <Layout>
     <SEO title="News" />
@@ -74,21 +94,7 @@ const IndexPage = () => (
         <Flex flexDirection={["column", null, "row"]}>
           {/* Content */}
           <Box flex={1} mr={[0, 4]}>
-            <NewsArticle
-              date="13 April 2019"
-              href="https://cointelegraph.com/news/ethereum-core-developers-consider-more-frequent-and-smaller-hard-forks"
-              title="Ethereum Core Developers Consider More Frequent and Smaller Hard Forks"
-            />
-            <NewsArticle
-              date="10 April 2019"
-              href="https://cointelegraph.com/news/blockchain-prediction-platform-augur-to-launch-stablecoin-dai-denominated-markets"
-              title="Blockchain Prediction Platform Augur to Launch Stablecoin DAI-Denominated Markets"
-            />
-            <NewsArticle
-              date="09 April 2019"
-              href="https://cointelegraph.com/news/cryptocurrency-lending-firm-dharma-launches-its-service-to-the-public"
-              title="Cryptocurrency Lending Firm Dharma Launches Its Service to the Public"
-            />
+            <NewsArticles />
           </Box>
 
           {/* Sidebar */}
@@ -98,7 +104,7 @@ const IndexPage = () => (
             flexDirection="column"
             alignItems="center"
             justifyContent="center"
-            width={[1, null,  300]}
+            width={[1, null, 300]}
             css={{ height: 300 }}
           >
             <Caps textAlign="center" mt={0} mb={3}>
