@@ -52,7 +52,7 @@ const NewsArticle = ({ date, title, href, ...rest }) => (
   </ArticleLink>
 );
 
-const NewsArticles = ({}) => {
+const NewsArticles = () => {
   const {
     news: { articles }
   } = useSiteMetadata();

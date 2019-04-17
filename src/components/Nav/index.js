@@ -8,7 +8,7 @@ import { GradientBar } from "../Card";
 import { InternalLink } from "../Links";
 
 const Nav = ({ page }) => {
-  const isNotMobile = useMedia('(min-width: 40em)');
+  const isNotMobile = useMedia("(min-width: 40em)");
 
   return (
     <Box
@@ -31,7 +31,7 @@ const Nav = ({ page }) => {
             {page === "developers" && <GradientBar gradient="richblue" />}
             <InternalLink to="/developers/">
               <Caps m={0} py={4}>
-                {isNotMobile ? "Developers": "Devs"}
+                {isNotMobile ? "Developers" : "Devs"}
               </Caps>
             </InternalLink>
           </Flex>
