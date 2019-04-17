@@ -14,7 +14,6 @@ import { Developers } from "../components/Images";
 import Stunt from "../components/Stunt";
 import { ExternalLink } from "../components/Links";
 import theme from "../components/Theme/theme";
-// import Nav from "../components/Nav";
 
 import smartContractBadge from "../images/smart-contract.svg";
 import solidityBadge from "../images/solidity.svg";
@@ -198,9 +197,7 @@ const IndexPage = () => (
 
     <GradientBar gradient="richblue" sticky />
 
-    {/* <Nav page="developers" /> */}
-
-    <Box as="section" my={[6, 7]}>
+    <Box as="section" my={[5, 6]}>
       <Container>
         <Box>
           <Developers />
@@ -212,7 +209,7 @@ const IndexPage = () => (
       </Container>
     </Box>
 
-    <Box my={[6, 7]}>
+    <Box my={[5, 6]}>
       <Container>
         <Paragraph mt={0} mb={5}>
           Ideas voted by the Ethereum community:
@@ -222,7 +219,7 @@ const IndexPage = () => (
       </Container>
     </Box>
 
-    <Box my={[6, 7, 8]}>
+    <Box my={[5, 6]}>
       <Container>
         <Row flexDirection={["column", null, "row"]}>
           <Col mb={[4, null, 0]} width={[1, null, 1 / 2]}>

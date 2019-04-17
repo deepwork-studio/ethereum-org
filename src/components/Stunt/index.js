@@ -6,7 +6,7 @@ import Paragraph from "../Paragraph";
 import { ExternalLink } from "../Links";
 
 const Stunt = () => (
-  <Box bg="primary" py={[6, 7]}>
+  <Box bg="primary" py={[5, 6]}>
     <Container>
       <Paragraph>
         This site is a demo project by the team at Deep Work Studio

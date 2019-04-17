@@ -14,7 +14,6 @@ import { Learn } from "../components/Images";
 import Stunt from "../components/Stunt";
 import { ExternalLink } from "../components/Links";
 import theme from "../components/Theme/theme";
-// import Nav from "../components/Nav";
 
 const ResourceCard = styled(Card).attrs({
   p: 3,
@@ -188,35 +187,21 @@ const LearnTabs = () => {
           onClick={() => setActiveTab(0)}
           active={activeTab === 0 && true}
         >
-          Mission and Vision
+          Current Applications
         </LearnTopic>
 
         <LearnTopic
           onClick={() => setActiveTab(1)}
           active={activeTab === 1 && true}
         >
-          What is Ethereum
+          Value Exchange
         </LearnTopic>
 
         <LearnTopic
           onClick={() => setActiveTab(2)}
           active={activeTab === 2 && true}
         >
-          Inspiration
-        </LearnTopic>
-
-        <LearnTopic
-          onClick={() => setActiveTab(3)}
-          active={activeTab === 3 && true}
-        >
-          Latest Projects Updates
-        </LearnTopic>
-
-        <LearnTopic
-          onClick={() => setActiveTab(4)}
-          active={activeTab === 4 && true}
-        >
-          Latest Projects
+          Censorship
         </LearnTopic>
       </Sidebar>
 
@@ -225,8 +210,6 @@ const LearnTabs = () => {
         {activeTab === 0 && <LearnArticles />}
         {activeTab === 1 && <LearnArticles />}
         {activeTab === 2 && <LearnArticles />}
-        {activeTab === 3 && <LearnArticles />}
-        {activeTab === 4 && <LearnArticles />}
       </Box>
     </Flex>
   );
@@ -236,11 +219,9 @@ const IndexPage = () => (
   <Layout>
     <SEO title="Learn" />
 
-    {/* <Nav page="learn" /> */}
-
     <GradientBar gradient="gossamer" sticky />
 
-    <Box as="section" my={[6, 7]}>
+    <Box as="section" my={[5, 6]}>
       <Container>
         <Box>
           <Learn />
@@ -252,7 +233,7 @@ const IndexPage = () => (
       </Container>
     </Box>
 
-    <Box my={[6, 7]}>
+    <Box my={[5, 6]}>
       <Container>
         <LearnTabs />
       </Container>

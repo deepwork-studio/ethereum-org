@@ -5,16 +5,13 @@ import styled from "styled-components";
 import Layout from "../components/Layout";
 import SEO from "../components/SEO";
 import { GradientBar } from "../components/Card";
-// import Paragraph from "../components/Paragraph";
 import Caps from "../components/Caps";
 import Header from "../components/Header";
 import Container from "../components/Container";
-// import { Row, Col } from "../components/Grid";
 import { News } from "../components/Images";
 import Stunt from "../components/Stunt";
 import { ExternalLink } from "../components/Links";
 import theme from "../components/Theme/theme";
-// import Nav from "../components/Nav";
 
 const ArticleTitle = styled(Text).attrs({
   fontSize: ["large", "xlarge"],
@@ -58,11 +55,9 @@ const IndexPage = () => (
   <Layout>
     <SEO title="News" />
 
-    {/* <Nav page="news" /> */}
-
     <GradientBar gradient="tapestry" sticky />
 
-    <Box as="section" my={[6, 7]}>
+    <Box as="section" my={[5, 6]}>
       <Container>
         <Box>
           <News />
@@ -74,7 +69,7 @@ const IndexPage = () => (
       </Container>
     </Box>
 
-    <Box my={[6, 7]}>
+    <Box my={[5, 6]}>
       <Container>
         <Flex flexDirection={["column", null, "row"]}>
           {/* Content */}
