@@ -8,7 +8,7 @@ const Container = props => (
     px={4}
     mx="auto"
     css={css`
-      max-width: 960px;
+      max-width: 1024px;
     `}
   />
 );
