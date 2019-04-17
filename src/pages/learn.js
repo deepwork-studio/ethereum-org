@@ -119,7 +119,7 @@ const LearnTabs = () => {
   return (
     <Flex flexDirection={["column", null, null, "row"]}>
       {/* Sidebar */}
-      <Sidebar>
+      <Sidebar flex={1/4}>
         <Paragraph mt={0} mb={3} lineHeight="double">
           <Text fontWeight="bold" as="span">
             The how and the why
@@ -151,7 +151,7 @@ const LearnTabs = () => {
       </Sidebar>
 
       {/* Content */}
-      <Box flex={1}>
+      <Box flex={3/4}>
         <LearnArticles category={activeTab} />
       </Box>
     </Flex>
