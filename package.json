@@ -1,9 +1,8 @@
 {
-  "name": "gatsby-deepwork-default",
-  "private": false,
-  "description": "A simple starter to get up and developing quickly with Gatsby & Deep Work Studio",
+  "name": "ethereum-org",
+  "description": "",
   "version": "0.1.0",
-  "author": "Jeff Reiner <jeff@deepwork.studio>",
+  "author": "@deepwork_studio",
   "dependencies": {
     "babel-plugin-styled-components": "^1.10.0",
     "gatsby": "^2.1.22",

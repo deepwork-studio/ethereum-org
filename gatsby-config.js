@@ -24,7 +24,7 @@ module.exports = {
           date: `09 April 2019`,
           title: `Cryptocurrency Lending Firm Dharma Launches Its Service to the Public`,
           link: `https://cointelegraph.com/news/cryptocurrency-lending-firm-dharma-launches-its-service-to-the-public`
-        },
+        }
       ]
     },
     learn: {
@@ -34,12 +34,6 @@ module.exports = {
           subtitle: `CryptoKitties is a game centered around breedable, collectible, and oh-so-adorable creatures we call CryptoKitties!`,
           image: `https://www.cryptokitties.co/images/share.png`,
           link: `https://www.cryptokitties.co/`
-        },
-        {
-          title: `My Cat Is Better than Yours`,
-          subtitle: `How CryptoKitties are different from Bitcoins and real cats — and why that matters`,
-          image: `https://cdn-images-1.medium.com/max/1000/1*3swNWJqRX7h47_gXvPEScQ.png`,
-          link: `https://medium.com/cryptokitties/what-the-heck-is-a-cryptokitty-4e14752e58c`
         },
         {
           title: `Changing the way we collaborate.`,
