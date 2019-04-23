@@ -1,5 +1,6 @@
 import React from "react";
 import { Flex } from "rebass";
+import { css } from "styled-components";
 
 import Layout from "../components/Layout";
 import SEO from "../components/SEO";
@@ -10,17 +11,31 @@ import Container from "../components/Container";
 import { Row, Col } from "../components/Grid";
 import { Developers, Logo, Learn, News } from "../components/Images";
 import { InternalLink } from "../components/Links";
+import theme from "../components/Theme/theme";
 
-const IndexPageCard = props => (
+const IndexPageCard = ({hoverColor, ...rest}) => (
   <Card
-    {...props}
+    {...rest}
     flex={1}
     bg="primary"
     pt={40 + 6}
     pb={4}
     px={4}
     shadow
-    css={{ height: "100%" }}
+    color="text"
+    css={css`
+      height: 100%;
+
+      &:hover {
+        color: ${theme.colors[hoverColor]};
+      }
+
+      /* Allow nested Header component to animate  */
+      > * {
+        transition-property: color;
+        transition-duration: 250ms;
+      }
+    `}
   />
 );
 
@@ -40,10 +55,10 @@ const IndexPage = () => (
         <Row flexDirection={["column", null, "row"]}>
           <Col width={[1, null, 1 / 3]} mb={[4, null, 0]}>
             <InternalLink flex={1} to="/developers/">
-              <IndexPageCard>
+              <IndexPageCard hoverColor="richblue">
                 <GradientBar gradient="richblue" />
                 <Developers mb={80} />
-                <Header as="h2" color="richblue">
+                <Header as="h2" color="inherit">
                   Build Unstoppable Organizations
                 </Header>
                 <Header as="p" fontWeight="medium" mt={2}>
@@ -55,11 +70,12 @@ const IndexPage = () => (
 
           <Col width={[1, null, 1 / 3]} mb={[4, null, 0]}>
             <InternalLink flex={1} to="/learn/">
-              <IndexPageCard>
+              <IndexPageCard hoverColor="gossamer">
                 <GradientBar gradient="gossamer" />
                 <Learn mb={80} />
-                <Header as="h2" color="gossamer">
-                  Why <br/>Ethereum?
+                <Header as="h2" color="inherit">
+                  Why <br />
+                  Ethereum?
                 </Header>
                 <Header as="p" fontWeight="medium" mt={2}>
                   Learn
@@ -70,10 +86,10 @@ const IndexPage = () => (
 
           <Col width={[1, null, 1 / 3]} mb={[4, null, 0]}>
             <InternalLink flex={1} to="/news/">
-              <IndexPageCard>
+              <IndexPageCard hoverColor="tapestry">
                 <GradientBar gradient="tapestry" />
                 <News mb={80} />
-                <Header as="h2" color="tapestry">
+                <Header as="h2" color="inherit">
                   News and Community
                 </Header>
                 <Header as="p" fontWeight="medium" mt={2}>
