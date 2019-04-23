@@ -59,7 +59,7 @@ const IndexPage = () => (
                 <GradientBar gradient="gossamer" />
                 <Learn mb={80} />
                 <Header as="h2" color="gossamer">
-                  Why Ethereum?
+                  Why <br/>Ethereum?
                 </Header>
                 <Header as="p" fontWeight="medium" mt={2}>
                   Learn
