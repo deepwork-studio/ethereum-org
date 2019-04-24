@@ -11,6 +11,8 @@ import Helmet from "react-helmet";
 
 import { useSiteMetadata } from "../../hooks";
 
+import ogImage from "../../images/og-image.png";
+
 const SEO = ({ description, lang, meta, title }) => {
   const siteMetadata = useSiteMetadata();
 
@@ -42,11 +44,19 @@ const SEO = ({ description, lang, meta, title }) => {
           content: `website`
         },
         {
+          property: `og:image`,
+          content: ogImage
+        },
+        {
           name: `twitter:card`,
-          content: `summary`
+          content: `summary_large_image`
         },
         {
           name: `twitter:creator`,
+          content: siteMetadata.author
+        },
+        {
+          name: `twitter:site`,
           content: siteMetadata.author
         },
         {

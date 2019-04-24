@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-    title: `Ethereum`,
+    title: `Ethereum Project`,
     description: `The worlds largest community solving global challenges and democratizing the internet.`,
     author: `@deepwork_studio`,
     news: {

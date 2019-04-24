@@ -14,7 +14,7 @@ const Stunt = () => (
       <Text fontFamily="worksans">
         <ExternalLink
           color="textinactive"
-          href="https://medium.com/deep-work-studio"
+          href="https://medium.com/deep-work-studio/ethereum-org-needs-updating-51d22dda550a"
         >
           Learn why we did this →
         </ExternalLink>
