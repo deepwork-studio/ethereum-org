@@ -32,6 +32,10 @@ const SEO = ({ description, lang, meta, title }) => {
           content: metaDescription
         },
         {
+          name: `author`,
+          content: siteMetadata.author
+        },
+        {
           property: `og:title`,
           content: title || siteMetadata.title
         },
