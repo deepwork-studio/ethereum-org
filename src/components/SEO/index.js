@@ -33,7 +33,7 @@ const SEO = ({ description, lang, meta, title }) => {
         },
         {
           property: `og:title`,
-          content: title
+          content: title || siteMetadata.title
         },
         {
           property: `og:description`,
@@ -45,7 +45,7 @@ const SEO = ({ description, lang, meta, title }) => {
         },
         {
           property: `og:image`,
-          content: ogImage
+          content: `${process.env.URL}${ogImage}`
         },
         {
           name: `twitter:card`,
@@ -61,7 +61,7 @@ const SEO = ({ description, lang, meta, title }) => {
         },
         {
           name: `twitter:title`,
-          content: title
+          content: title || siteMetadata.title
         },
         {
           name: `twitter:description`,
