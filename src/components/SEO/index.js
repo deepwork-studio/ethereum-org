@@ -40,12 +40,16 @@ const SEO = ({ description, lang, meta, title }) => {
           content: metaDescription
         },
         {
+          property: `og:url`,
+          content: siteMetadata.siteUrl
+        },
+        {
           property: `og:type`,
           content: `website`
         },
         {
           property: `og:image`,
-          content: `${process.env.URL}${ogImage}`
+          content: `${siteMetadata.siteUrl}${ogImage}`
         },
         {
           name: `twitter:card`,
