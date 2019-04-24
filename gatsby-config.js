@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
     title: `Ethereum Project`,
-    description: `The worlds largest community solving global challenges and democratizing the internet.`,
+    description: `The world's largest community solving global challenges and democratizing the internet.`,
     author: `@deepwork_studio`,
     siteUrl: process.env.URL || `https://ethereum.org.deepwork.studio`,
     news: {

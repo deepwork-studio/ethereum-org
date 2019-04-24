@@ -48,7 +48,7 @@ const IndexPage = () => (
         <Logo mt={[4, 0]} />
 
         <Paragraph mt={[3, 4]} mb={[4, 5]}>
-          The worlds largest community solving global challenges and
+          The world's largest community solving global challenges and
           democratizing the internet.
         </Paragraph>
 
